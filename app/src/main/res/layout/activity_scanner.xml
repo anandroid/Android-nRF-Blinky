@@ -73,6 +73,19 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/appbar_layout"/>
 
+
+	<Button
+		android:id="@+id/wayPointCaptureButton"
+		android:layout_width="300dp"
+		android:layout_height="80dp"
+		android:text="Way Point generation"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		>
+
+	</Button>
+
 	<include
 		android:id="@+id/no_devices"
 		layout="@layout/info_no_devices"

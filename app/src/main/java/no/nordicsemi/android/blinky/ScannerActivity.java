@@ -172,6 +172,12 @@ public class ScannerActivity extends AppCompatActivity implements DevicesAdapter
 		startActivity(intent);
 	}
 
+	@OnClick(R.id.wayPointCaptureButton)
+	public void onWayPointGeneration(){
+		final Intent intent = new Intent(this,WayPointActivity.class);
+		startActivity(intent);
+	}
+
 	/**
 	 * Start scanning for Bluetooth devices or displays a message based on the scanner state.
 	 */
