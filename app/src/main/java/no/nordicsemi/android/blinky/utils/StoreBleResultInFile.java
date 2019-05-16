@@ -23,7 +23,7 @@ public class StoreBleResultInFile {
 
             boolean limitOverForADevice = false;
 
-            String stringConstructor = String.valueOf(index + 1) + " : [" ;
+            String stringConstructor = "\""+String.valueOf(index + 1) +"\""+" : [" ;
 
             for (String deviceName : bleHistoryMap.keySet()) {
 
@@ -33,10 +33,14 @@ public class StoreBleResultInFile {
                     break;
                 }
                 int rssiPower = historyList.get(index);
-                stringConstructor = stringConstructor + "{" + deviceName + "  :  " + String.valueOf(rssiPower);
-                stringConstructor = stringConstructor + "}\n";
+                stringConstructor = stringConstructor + "{  \"" + deviceName + "\"  :  \"" + String.valueOf(rssiPower);
+                stringConstructor = stringConstructor + "\"},";
             }
-            stringConstructor = stringConstructor+"]";
+            if(bleHistoryMap.keySet().size()>0) {
+                stringConstructor = stringConstructor.substring(0, stringConstructor.length() - 1) + "]";
+            } else {
+                stringConstructor = stringConstructor+ "]";
+            }
             mainStringConstructor = mainStringConstructor+stringConstructor;
             if (limitOverForADevice) {
                 mainStringConstructor = mainStringConstructor+"}";

@@ -33,8 +33,8 @@ public class WayPointActivity extends AppCompatActivity {
     private Map<String,List<Integer>> bleHistoryMap =  new HashMap<>();
     private int currentWayPointIndex = 1;
 
-    final int DATA_COLLECION_SIZE_FOR_EACH_WAYPOINT = 10 ;
-    final int DATA_COLLECTION_INTERVAL_IN_MS = 1000;
+    final int DATA_COLLECION_SIZE_FOR_EACH_WAYPOINT = 100 ;
+    final int DATA_COLLECTION_INTERVAL_IN_MS = 300;
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
